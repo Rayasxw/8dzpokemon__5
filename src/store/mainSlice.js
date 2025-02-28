@@ -4,7 +4,7 @@ import axios from "axios";
 export const getPokemons = createAsyncThunk(
     'getPokemons',
     async () => {
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=10')
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=1000')
         const pokemons = response.data.results
 
         const detailedPokemons = await Promise.all(
